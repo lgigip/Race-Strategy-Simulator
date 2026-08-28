@@ -3,8 +3,8 @@ from dataclasses import dataclass, asdict
 from typing import Dict, List
 import random
 
-TIRES = {"Soft": (-5, 2), "Medium": (-3, 1), "Hard": (-1, 0.5), "Wet": (-2, 1)}  # (sec, wear) Wet only good in rain
-PUSH  = {1: (0, -1, -1), 2: (-2, 1, 1), 3: (-4, 2, 2)}  # (sec, tireWear, fuelWear)
+TIRES = {"Soft": (-5, 2), "Medium": (-3, 1), "Hard": (-1, 0.5), "Wet": (-2, 1)}
+PUSH  = {1: (0, -1, -1), 2: (-2, 1, 1), 3: (-4, 2, 2)}
 WEATHER = ["Dry","Hot","Rain","Safety Car"]
 
 BASE_LAP = 90
@@ -70,10 +70,10 @@ st.session_state["laps"] = laps
 # Init teams
 if "teams" not in st.session_state:
     st.session_state.teams: Dict[str, TeamState] = {
-        "Alpha": TeamState("Alpha"),
-        "Bravo": TeamState("Bravo"),
-        "Charlie": TeamState("Charlie"),
-        "Delta": TeamState("Delta")
+        "Rapid Racers": TeamState("Rapid Racers"),
+        "Turbo Titans": TeamState("Turbo Titans"),
+        "Blaze Brigade": TeamState("Blaze Brigade"),
+        "Dynamo Drivers": TeamState("Dynamo Drivers")
     }
 if "lap" not in st.session_state:
     st.session_state.lap = 1
